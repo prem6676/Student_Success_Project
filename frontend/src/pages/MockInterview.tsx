@@ -706,9 +706,7 @@ export const MockInterview = () => {
   const recognitionRef = useRef<any>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
-  useEffect(() => {
-    if (!(import.meta as any).env?.VITE_GROQ_API_KEY) setGroqKeyMissing(true);
-  }, []);
+
 
   useEffect(() => {
     if (phase !== 'interview') return;
@@ -902,15 +900,7 @@ export const MockInterview = () => {
         </Box>
       </Box>
 
-      {groqKeyMissing && (
-        <Paper sx={{ p: 2, mb: 3, border: '1px solid #f59e0b40', bgcolor: '#78350f20', borderRadius: 2 }}>
-          <Typography sx={{ color: '#fcd34d', fontSize: 13, fontWeight: 600 }}>
-            ⚠️ Add <code>VITE_GROQ_API_KEY=your_key</code> to your <code>.env</code> file.
-            Get a free key at <a href="https://console.groq.com" target="_blank" rel="noreferrer" style={{ color: '#60a5fa' }}>console.groq.com</a>.
-          </Typography>
-        </Paper>
-      )}
-
+     
       <AnimatePresence mode="wait">
 
         {/* ── SETUP ── */}
