@@ -14,7 +14,7 @@ export const USE_GEMINI = rawUseGemini === 'true' && Boolean(hasGeminiKey);
 export const OLLAMA_BASE_URL = env.VITE_OLLAMA_BASE_URL || DEFAULT_OLLAMA_BASE_URL;
 export const OLLAMA_MODEL = env.VITE_OLLAMA_MODEL || DEFAULT_OLLAMA_MODEL;
 
-export const API_BASE_URL = export const API_BASE_URL = env.VITE_API_URL || env.VITE_API_BASE_URL || DEFAULT_API_BASE_URL;
+export const API_BASE_URL = env.VITE_API_URL || env.VITE_API_BASE_URL || DEFAULT_API_BASE_URL;
 
 export const API_ENDPOINTS = {
   
